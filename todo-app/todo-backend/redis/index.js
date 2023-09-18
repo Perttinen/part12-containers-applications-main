@@ -1,6 +1,8 @@
 const redis = require('redis')
 const { promisify } = require('util')
-const { REDIS_URL } = require('../util/config')
+// const { REDIS_URL } = require('../util/config')
+
+const REDIS_URL = process.env.REDIS_URL
 
 let getAsync
 let setAsync
