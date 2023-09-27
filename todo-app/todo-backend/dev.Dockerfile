@@ -6,6 +6,8 @@ COPY --chown=node:node . .
 
 RUN npm install
 
+EXPOSE 3001
+
 USER node
 
 CMD ["npm", "run", "dev"]

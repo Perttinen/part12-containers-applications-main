@@ -6,8 +6,8 @@ services:
       dockerfile: dev.Dockerfile
     volumes:
       - ./todo-frontend/:/usr/src/app
-    ports:
-      - 3000:3000
+    # ports:
+    #   - 3000:3000
     container_name: todo-front-dev
 
   mongo:
@@ -37,8 +37,8 @@ services:
       dockerfile: dev.Dockerfile
     volumes:
       - ./todo-backend:/usr/src/app
-    ports:
-      - 3001:3001
+    # ports:
+    #   - 3001:3001
     environment: 
       - REDIS_URL=//redis:6379
       - MONGO_URL=mongodb://the_username:the_password@mongo:27017/the_database
