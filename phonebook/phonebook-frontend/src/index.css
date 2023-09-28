@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.errorMessage {
+  color: red;
+}
+
+.infoMessage {
+  color: green;
+}
+
+.infoMessage,
+.errorMessage {
+  background: lightgrey;
+  font-size: 20px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0.5rem;
+  background-color: rgb(1, 17, 17);
+  color: beige;
+  font-size: 1.2rem;
+  line-height: 3rem;
+}
+
+.header {
+  background-color: rgb(64, 107, 109);
+  text-align: center;
+  height: 3em;
+  border-bottom: 5px double rgb(30, 148, 113);
+}
+
+.addNew {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+}
+
+input{
+  font-size: inherit;
+  font-weight: bold;
+}
+
+button{
+  padding: 3px;
+  font-size: 1.5rem;
+  border: none;
+}
+
+.greenButton{
+  background-color: green;
+  color: bisque;
+}
+
+.redButton{
+  background-color: red;
+  color: bisque;
+}
+
+h2{
+  font-size: 1.5rem;
+}
