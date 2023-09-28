@@ -1,5 +1,7 @@
+version: '3.8'
+
 services:
-  app:
+  frontend:
     image: phonebook-frontend-dev
     build:
       context: ./phonebook-frontend/
@@ -10,40 +12,26 @@ services:
       - 3000:3000
     container_name: phonebook-front-dev
 
-  server:
+  # server:
+  #   image: phonebook-backend-com
+  #   build:
+  #     context: ./phonebook-backend
+  #     dockerfile: dev.Dockerfile
+  #   volumes:
+  #     - ./phonebook-backend:/usr/src/app
+  #   env_file:
+  #     - ./phonebook-backend/.env
+  #   ports:
+  #     - 3001:3001
+  #   # environment: 
+  #   #   - MONGO_URL=mongodb://the_username:the_password@mongo:27017/the_database
+  #   container_name: phonebook-back-dev
+
+  backend:
     image: phonebook-backend-dev
     build:
-      context: ./phonebook-backend/
+      context: ./phonebook-backend
       dockerfile: dev.Dockerfile
-    volumes:
-      - ./phonebook-backend/:/usr/src/app
     ports:
       - 3001:3001
-    # environment: 
-    #   - MONGO_URL=mongodb://the_username:the_password@mongo:27017/the_database
     container_name: phonebook-back-dev
-
-  # mongo:
-  #   image: mongo
-  #   ports:
-  #     - 3456:27017
-  #   environment:
-  #     MONGO_INITDB_ROOT_USERNAME: root
-  #     MONGO_INITDB_ROOT_PASSWORD: example
-  #     MONGO_INITDB_DATABASE: the_database
-  #   volumes: 
-  #     - ./todo-backend/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
-  #     - ./todo-backend/mongo_data:/data/db
-  #   container_name: mongo
-
-
-  # nginx:
-  #   image: nginx:1.20.1
-  #   volumes:
-  #     - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro
-  #   ports:
-  #     - 8080:80
-  #   container_name: reverse-proxy
-  #   depends_on:
-  #     - app
-  #     - server

@@ -1,12 +1,14 @@
-FROM node:18
+FROM node:16
 
 WORKDIR /usr/src/app
 
 COPY --chown=node:node . .
 
+# COPY . .
+
 RUN npm install
 
-EXPOSE 3001
+ENV DEBUG=phonebook-backend:*
 
 USER node
 

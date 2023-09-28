@@ -4,3 +4,4 @@ Dockerfile
 mongo_data
 redis_data
 dev.Dockerfile
+node_modules
