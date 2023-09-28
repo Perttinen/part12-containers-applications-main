@@ -1,5 +1,5 @@
 {
-  "name": "puhelinluettelo_backend",
+  "name": "phonebook_backend",
   "version": "1.0.0",
   "description": "https://puhlu666.fly.dev/api/persons\r https://green-breeze-9404.fly.dev/\r https://damp-bush-8490.fly.dev/\r mongodb+srv://fullstackuser:<password>@cluster0.disc4ny.mongodb.net/?retryWrites=true&w=majority",
   "main": "index.js",
@@ -23,7 +23,7 @@
     "latest": "^0.2.0",
     "mongoose": "^6.5.4",
     "morgan": "^1.10.0",
-    "node": "^18.8.0"
+    "node": "^18.18.0"
   },
   "devDependencies": {
     "eslint": "^8.2.0",
