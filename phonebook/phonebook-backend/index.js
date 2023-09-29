@@ -18,7 +18,7 @@ app.use(
 app.use(cors())
 app.use(express.static('build'))
 
-app.get('/', (req, res) => res.send('<h1>HelloJeejee</h1>'))
+app.get('/', (req, res) => res.send('<h1>HelloJe</h1>'))
 
 app.get('/info', (req, res) => {
   const now = new Date()

@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  frontend:
+    image: phonebook-frontend-dev
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - 3000:3000
+    command: npm start
+    container_name: phonebook-front-dev

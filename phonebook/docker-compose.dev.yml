@@ -12,26 +12,25 @@ services:
       - 3000:3000
     container_name: phonebook-front-dev
 
-  # server:
-  #   image: phonebook-backend-com
+  backend:                   
+    image: phonebook-backend-dev 
+    build:
+      context: ./phonebook-backend
+      dockerfile: dev.Dockerfile 
+    volumes:
+      - ./phonebook-backend:/usr/src/app
+      - /usr/src/app/node_modules           
+    ports:            
+      - 3001:3001
+  #   # environment: 
+  #   #   - MONGO_URL=mongodb://the_username:the_password@mongo:27017/the_database
+    container_name: phonebook-back-dev
+
+  # backend:
+  #   image: phonebook-backend-dev
   #   build:
   #     context: ./phonebook-backend
   #     dockerfile: dev.Dockerfile
-  #   volumes:
-  #     - ./phonebook-backend:/usr/src/app
-  #   env_file:
-  #     - ./phonebook-backend/.env
   #   ports:
   #     - 3001:3001
-  #   # environment: 
-  #   #   - MONGO_URL=mongodb://the_username:the_password@mongo:27017/the_database
   #   container_name: phonebook-back-dev
-
-  backend:
-    image: phonebook-backend-dev
-    build:
-      context: ./phonebook-backend
-      dockerfile: dev.Dockerfile
-    ports:
-      - 3001:3001
-    container_name: phonebook-back-dev
